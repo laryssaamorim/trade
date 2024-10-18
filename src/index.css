@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-white;
+  font-family: 'Lato', sans-serif;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3; /* Reduce opacity to 30% during blink */
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Sell and buy order styles */
+.sell-order {
+  @apply bg-transparent; /* No background for default state */
+}
+
+.buy-order {
+  @apply bg-transparent; /* No background for default state */
+}
+
+/* Customize text colors for orders */
+.sell-order-text {
+  @apply text-[#FF5500]; /* Sell order text color */
+}
+
+.buy-order-text {
+  @apply text-[#41E88E]; /* Buy order text color */
+}
+
+/* Styles for active blinking state */
+.blinking-sell-order {
+  @apply bg-[#531326] opacity-30; /* Background color for sell orders when blinking */
+}
+
+.blinking-buy-order {
+  @apply bg-[#09654C] opacity-30; /* Background color for buy orders when blinking */
+}
